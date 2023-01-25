@@ -24,11 +24,9 @@ func main() {
 	url := fmt.Sprint(
 		baseUrl,
 		"&",
-		PRODUCT_QUESTION_ID,
-		PRODUCT_QUESTION_ANSWER,
+		PRODUCT_QUESTION_ID, "=", PRODUCT_QUESTION_ANSWER,
 		"&",
-		PRICE_QUESTION_ID,
-		PRICE_QUESTION_ANSWER,
+		PRICE_QUESTION_ID, "=", PRICE_QUESTION_ANSWER,
 	)
 
 	resp, err := http.Post(url, "application/x-www-form-urlencoded", nil)
